@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solvtech.id | Official Profile</title>
+    <!-- Favicon (Logo di Tab Browser) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,18 +15,16 @@
         /* --- 1. PENGATURAN TAMPILAN UTAMA --- */
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            /* Gambar Background Gedung */
             background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
-        /* Lapisan Gelap agar tulisan terbaca jelas */
         .overlay {
-            background: rgba(15, 23, 42, 0.85); /* Warna Gelap Transparan */
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(4px);
         }
         
-        /* --- 2. KOMPONEN TOMBOL & CARD --- */
+        /* --- 2. KOMPONEN --- */
         .glass-card {
             background: rgba(255, 255, 255, 0.95);
             color: #1e293b;
@@ -31,7 +32,6 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
-        /* Gaya Tombol Utama */
         .btn-link {
             display: flex; align-items: center; justify-content: space-between;
             padding: 12px 16px; border-radius: 16px; margin-bottom: 12px;
@@ -41,7 +41,6 @@
         .btn-white { background: white; color: #1e293b; }
         .btn-white:hover { background: #f1f5f9; }
 
-        /* Gaya Ikon Sosial Media */
         .social-icon {
             width: 36px; height: 36px; background: rgba(255,255,255,0.1);
             display: flex; align-items: center; justify-content: center;
@@ -49,7 +48,6 @@
         }
         .social-icon:hover { background: white; color: #0f172a; transform: scale(1.1); }
 
-        /* Animasi WA Berdenyut */
         .wa-pulse { animation: pulse-green 2s infinite; }
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
@@ -57,7 +55,6 @@
             100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
 
-        /* Portfolio Hide/Show Animasi */
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
         .accordion-content.open { max-height: 1200px; }
     </style>
@@ -67,19 +64,16 @@
 
     <main class="relative z-10 w-full max-w-md mx-auto px-4 py-10 flex flex-col items-center">
         
-        <!-- HEADER: LOGO & JUDUL -->
+        <!-- HEADER -->
         <div class="text-center mb-6">
-            <!-- Logo Text -->
             <h1 class="text-4xl font-extrabold tracking-tight mb-1 flex items-center justify-center">
                 <span class="text-white">SOLV</span><span class="text-orange-500">TECH</span>
-                <!-- Centang Orange -->
                 <div class="bg-orange-500 text-white w-5 h-5 flex items-center justify-center rounded-full border-2 border-white text-[9px] ml-1 mt-1 shadow-sm">
                     <i class="fa-solid fa-check"></i>
                 </div>
             </h1>
             <p class="text-slate-300 text-sm">Business Partner & Digital Solution 🚀</p>
             
-            <!-- SOCIAL ICONS -->
             <div class="flex gap-4 justify-center mt-4">
                 <a href="https://www.instagram.com/solvtech.id?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@solvtechh.id?_r=1&_t=ZS-920vYB17NDQ" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
@@ -89,14 +83,11 @@
         <!-- MENU UTAMA -->
         <div class="w-full space-y-3">
             
-            <!-- 1. WHATSAPP (Tombol Hijau) -->
+            <!-- 1. WHATSAPP -->
             <a href="https://wa.me/6285885261086?text=Halo%20Admin%20Solvtech,%20saya%20tertarik%20layanan%20Anda." target="_blank" class="btn-link bg-green-600 text-white wa-pulse hover:bg-green-700 border-none">
                 <div class="flex items-center gap-3">
                     <i class="fa-brands fa-whatsapp text-3xl"></i>
-                    <div>
-                        <p class="font-bold text-lg">Pesan Sekarang</p>
-                        <p class="text-green-100 text-xs">Chat Admin Fast Response</p>
-                    </div>
+                    <div><p class="font-bold text-lg">Pesan Sekarang</p><p class="text-green-100 text-xs">Chat Admin Fast Response</p></div>
                 </div>
                 <i class="fa-solid fa-arrow-right opacity-80"></i>
             </a>
@@ -110,16 +101,7 @@
                 <i class="fa-solid fa-angle-right text-slate-500"></i>
             </a>
 
-            <!-- 3. IMPORT -->
-            <a href="https://import.solvtech.id" target="_blank" class="btn-link btn-white">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-ship"></i></div>
-                    <div><p class="font-bold text-sm">Solvtech Import</p><p class="text-slate-500 text-xs">Jasa Import & Logistik</p></div>
-                </div>
-                <i class="fa-solid fa-angle-right text-slate-400"></i>
-            </a>
-
-            <!-- 4. ACADEMY -->
+            <!-- 3. ACADEMY (Naik ke atas Import) -->
             <a href="https://course.solvtech.id" target="_blank" class="btn-link btn-white">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -127,106 +109,54 @@
                 </div>
                 <i class="fa-solid fa-angle-right text-slate-400"></i>
             </a>
+
+            <!-- 4. SOLVIMPORT (Ganti Nama & Turun Posisi) -->
+            <a href="https://import.solvtech.id" target="_blank" class="btn-link btn-white">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-ship"></i></div>
+                    <div><p class="font-bold text-sm">Solvimport</p><p class="text-slate-500 text-xs">Jasa Import & Logistik</p></div>
+                </div>
+                <i class="fa-solid fa-angle-right text-slate-400"></i>
+            </a>
         </div>
 
-        <!-- DAFTAR LAYANAN (STATIC INFO) -->
+        <!-- INFO LAYANAN -->
         <div class="w-full mt-6">
             <p class="text-[10px] uppercase font-bold text-slate-400 text-center mb-3 tracking-widest">Layanan Tersedia</p>
-            
             <div class="glass-card rounded-2xl p-4">
                 <div class="grid grid-cols-2 gap-3 text-center">
-                    <div class="p-2 bg-slate-50 rounded-lg">
-                        <i class="fa-solid fa-scale-balanced text-blue-500 mb-1"></i>
-                        <p class="text-xs font-bold">Legalitas</p>
-                        <p class="text-[9px] text-slate-500">NIB, Halal, PT/CV</p>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-lg">
-                        <i class="fa-solid fa-code text-indigo-500 mb-1"></i>
-                        <p class="text-xs font-bold">Digital Dev</p>
-                        <p class="text-[9px] text-slate-500">Web, App, ERP</p>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-lg">
-                        <i class="fa-solid fa-video text-pink-500 mb-1"></i>
-                        <p class="text-xs font-bold">Creative</p>
-                        <p class="text-[9px] text-slate-500">Live & Sosmed</p>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-lg">
-                        <i class="fa-solid fa-chart-line text-amber-500 mb-1"></i>
-                        <p class="text-xs font-bold">Finance</p>
-                        <p class="text-[9px] text-slate-500">Course Investasi</p>
-                    </div>
+                    <div class="p-2 bg-slate-50 rounded-lg"><i class="fa-solid fa-scale-balanced text-blue-500 mb-1"></i><p class="text-xs font-bold">Legalitas</p><p class="text-[9px] text-slate-500">NIB, Halal, PT/CV</p></div>
+                    <div class="p-2 bg-slate-50 rounded-lg"><i class="fa-solid fa-code text-indigo-500 mb-1"></i><p class="text-xs font-bold">Digital Dev</p><p class="text-[9px] text-slate-500">Web, App, ERP</p></div>
+                    <div class="p-2 bg-slate-50 rounded-lg"><i class="fa-solid fa-video text-pink-500 mb-1"></i><p class="text-xs font-bold">Creative</p><p class="text-[9px] text-slate-500">Live & Sosmed</p></div>
+                    <div class="p-2 bg-slate-50 rounded-lg"><i class="fa-solid fa-chart-line text-amber-500 mb-1"></i><p class="text-xs font-bold">Finance</p><p class="text-[9px] text-slate-500">Course Investasi</p></div>
                 </div>
                 <p class="text-[10px] text-center text-slate-400 mt-3 italic">Pesan layanan di atas via WhatsApp</p>
             </div>
         </div>
 
-        <!-- PORTOFOLIO (HIDE/SHOW) -->
+        <!-- PORTOFOLIO -->
         <div class="w-full mt-4">
             <button onclick="togglePorto()" class="w-full bg-slate-800/60 backdrop-blur-md text-white p-3 rounded-xl text-sm font-semibold border border-white/10 hover:bg-slate-700 transition flex justify-center items-center gap-2">
                 <i class="fa-solid fa-folder-open text-blue-400"></i> Lihat Portofolio Project
                 <i id="arrow-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
             </button>
-
-            <!-- Isi Portofolio -->
             <div id="porto-list" class="accordion-content mt-2">
                 <div class="glass-card rounded-xl p-2 space-y-2">
-                    <!-- Item List -->
-                    <a href="https://bppptegal.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-ship text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Nelayan</p><p class="text-[10px] text-slate-500 truncate">bppptegal.id</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-                    
-                    <a href="https://admin.bppptegal.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-lock text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">Admin Panel Nelayan</p><p class="text-[10px] text-slate-500 truncate">admin.bppptegal.id</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                    <a href="https://www.nutrisee.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-carrot text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Booking Gizi</p><p class="text-[10px] text-slate-500 truncate">nutrisee.id</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                    <a href="https://www.confiction.com" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-layer-group text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">CMS Confiction Labs</p><p class="text-[10px] text-slate-500 truncate">confiction.com</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                    <a href="https://www.playriftstorm.com/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-gamepad text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">CMS Rifstorm</p><p class="text-[10px] text-slate-500 truncate">playriftstorm.com</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                    <a href="https://one.confiction.com/portal" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-dungeon text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">Portal Riftstorm</p><p class="text-[10px] text-slate-500 truncate">one.confiction.com</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                    <a href="https://one.confiction.com/xpsr" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0"><i class="fa-brands fa-ethereum text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">NFT App XPSR24</p><p class="text-[10px] text-slate-500 truncate">one.confiction.com/xpsr</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
-
-                     <a href="https://bprbonding.my.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition">
-                        <div class="w-7 h-7 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-file-invoice text-xs"></i></div>
-                        <div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Laporan Asuransi</p><p class="text-[10px] text-slate-500 truncate">bprbonding.my.id</p></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
-                    </a>
+                    <a href="https://bppptegal.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-ship text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Nelayan</p><p class="text-[10px] text-slate-500 truncate">bppptegal.id</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://admin.bppptegal.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-lock text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">Admin Panel Nelayan</p><p class="text-[10px] text-slate-500 truncate">admin.bppptegal.id</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://www.nutrisee.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-carrot text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Booking Gizi</p><p class="text-[10px] text-slate-500 truncate">nutrisee.id</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://www.confiction.com" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-layer-group text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">CMS Confiction Labs</p><p class="text-[10px] text-slate-500 truncate">confiction.com</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://www.playriftstorm.com/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-gamepad text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">CMS Rifstorm</p><p class="text-[10px] text-slate-500 truncate">playriftstorm.com</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://one.confiction.com/portal" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-dungeon text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">Portal Riftstorm</p><p class="text-[10px] text-slate-500 truncate">one.confiction.com</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://one.confiction.com/xpsr" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0"><i class="fa-brands fa-ethereum text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">NFT App XPSR24</p><p class="text-[10px] text-slate-500 truncate">one.confiction.com/xpsr</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
+                    <a href="https://bprbonding.my.id/" target="_blank" class="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition"><div class="w-7 h-7 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-file-invoice text-xs"></i></div><div class="flex-1 overflow-hidden"><p class="text-xs font-bold text-slate-800 truncate">App Laporan Asuransi</p><p class="text-[10px] text-slate-500 truncate">bprbonding.my.id</p></div><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>
                 </div>
             </div>
         </div>
 
         <!-- FOOTER -->
         <div class="text-center pt-8 pb-4">
-            <p class="text-xs font-semibold text-slate-300">Jam Operasional</p>
-            <p class="text-xs text-slate-400">Senin - Jumat | 09.00 - 17.00 WIB</p>
-            <p class="text-[10px] text-slate-400 pt-4">&copy; 2025 Solvtech.id</p>
+            <p class="text-xs text-slate-400 font-medium">&copy; 2025 Solvtech.id</p>
         </div>
 
     </main>
